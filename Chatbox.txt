@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 2rem;
+        }
+        #aichatbot {
+            margin-top: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+    <main>
+        <p>Interact with our AI Chatbot below:</p>
+
+        <!-- Chatbot integration -->
+        <div id="aichatbot"></div>
+        <script>
+            !function(w, d, s, ...args){
+              var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s);
+              j.defer = true;
+              j.type = 'module';
+              j.src = 'https://aichatbot.sendbird.com/index.js';
+              f.parentNode.insertBefore(j, f);
+              w.chatbotConfig = args;
+            }(window, document, 'script', '98E39EBD-BD24-4729-9A8B-84B931FE32D7', 'onboarding_bot', {
+              apiHost: 'https://api-cf-ap-8.sendbird.com',
+            });
+        </script>
+    </main>
+    <footer>
+        &copy; 2024 Our Website. All rights reserved.
+    </footer>
+</body>
+</html>
